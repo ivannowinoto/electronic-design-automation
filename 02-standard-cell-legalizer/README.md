@@ -80,15 +80,3 @@ The program accepts DEF (Design Exchange Format) files containing initial cell p
 
 ### Output
 The output file contains legalized placement coordinates in the same format as the input file, with cells repositioned to satisfy all legalization constraints.
-
-## Documentation
-
-For detailed information about the algorithms and data structures used in this implementation, please refer to `report.docx`.
-
-## License
-
-This project is an academic assignment. Please refer to your institution's academic integrity policies regarding use and distribution.
-
-## Contact
-
-For questions or issues, please contact the course instructor or teaching assistant.
