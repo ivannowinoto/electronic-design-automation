@@ -1,0 +1,64 @@
+PA2: Single-Row-Height Cell Legalization
+
+----------------------------------------------------
+Problem Description
+----------------------------------------------------
+The task is to implement a standard cell legalizer for designs consisting only of single-row-height cells.
+Given the global placement results and standard cell information, the legalizer must place all cells so that:
+
+1. All cells align properly with predefined placement rows and sites.
+2. No cells overlap with each other.
+3. The orientation of cells matches the row orientations.
+4. The total displacement of all cells (from their global placement positions) is minimized.
+
+All cells are assumed to have the same width (in terms of placement sites), which is specified through
+command-line parameters.
+
+----------------------------------------------------
+Input Format
+----------------------------------------------------
+Each input file (case*.def) contains:
+- Die area coordinates.
+- Row configurations (row name, site name, coordinates, orientation, number of sites, and step size).
+- Global placement results for each component (cell name, macro name, placement coordinates, and orientation).
+
+Example Command to Execute:
+    ./legalizer [cell width] [alpha] [input file name] [output file name]
+
+Example Input File Snippet:
+    DIEAREA ( 0 0 ) ( 10000 10000 );
+    ROW core_SITE_ROW_0 core 0 0 N DO 50 BY 1 STEP 200 0;
+    COMPONENTS 8;
+    - Attack Titan + PLACED ( 3876 3684 ) N;
+    ...
+
+----------------------------------------------------
+Output Format
+----------------------------------------------------
+The output file (LG_case*.def) records the legalized cell placement, following the same format as the input.
+All components must be placed within valid sites, aligned to rows, and free of overlaps.
+
+Example Output File Snippet:
+    DIEAREA ( 0 0 ) ( 10000 10000 );
+    ROW core_SITE_ROW_0 core 0 0 N DO 50 BY 1 STEP 200 0;
+    COMPONENTS 8;
+    - Attack Titan + PLACED ( 3800 4000 ) N;
+    ...
+
+----------------------------------------------------
+Evaluation Criteria
+----------------------------------------------------
+The program is evaluated based on:
+1. Correctness — all cells must be placed legally (aligned and non-overlapping).
+2. Execution time — must complete within 5 minutes.
+3. Output quality — measured using the formula:
+       Avg. cell displacement + α × Max. cell displacement
+   where α is a given weighting parameter.
+
+----------------------------------------------------
+Key Requirements
+----------------------------------------------------
+- Language: C or C++
+- Platform: Linux/Unix
+- Input/Output file format must strictly follow the DEF standard.
+- Command-line execution only.

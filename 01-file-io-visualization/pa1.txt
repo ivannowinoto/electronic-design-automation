@@ -1,0 +1,53 @@
+PA1: Physical Circuit Design Visualization
+
+------------------------------------
+Objective
+------------------------------------
+The goal of this assignment is to visualize physical circuit design data using Gnuplot.
+Students will convert raw text-based circuit data into visual graphics, helping to verify
+algorithmic results and assist in debugging.
+
+------------------------------------
+Assignment Description
+------------------------------------
+Write a program in C or C++ that:
+1. Reads an input file (text format similar to DEF layout data).
+2. Processes and converts the data into Gnuplot commands.
+3. Outputs a .gp file that can be opened by Gnuplot to visualize the circuit layout.
+
+------------------------------------
+Implementation Steps
+------------------------------------
+1. Create a simple class or struct to store design information.
+2. Read the input file using fstream.
+3. Generate a Gnuplot script (.gp) according to the input data.
+4. Open the .gp file with Gnuplot to view the visualization.
+
+------------------------------------
+Input and Output Format
+------------------------------------
+Input: A text file describing IC layout data (DEF-like format)
+  Includes:
+    - Die area → draw a bounding box
+    - Components → draw boxes for each module (MSBCS)
+    - Special nets → draw boxes for metal segments (e.g., ME3, ME4 layers)
+
+Output: A .gp Gnuplot file that draws rectangles representing
+  - Die area
+  - Components
+  - Metal layers (with different colors and labels based on input)
+
+------------------------------------
+Example Command
+------------------------------------
+./genPlot 7100 6600 input.txt output.gp
+
+Executable name must be 'genPlot' (as specified in the provided Makefile).
+Command-line parameters include width, height, input file, and output file.
+
+------------------------------------
+References
+------------------------------------
+Gnuplot Download: https://sourceforge.net/projects/gnuplot/
+Color Reference Chart: https://www.ifreesite.com/color/
+Course Moodle: Provides sample input/output and example submission files.
