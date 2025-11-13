@@ -125,11 +125,3 @@ Ensure Gnuplot is installed and accessible in your system PATH.
 
 ### Output image not generated
 Check that the `.gp` file was created successfully and contains valid Gnuplot commands.
-
-## License
-
-This project is an academic assignment. Please refer to your institution's academic integrity policies regarding use and distribution.
-
-## Contact
-
-For questions or issues, please contact the course instructor or teaching assistant.
