@@ -10,14 +10,14 @@ Linux — GNU g++ compiler
 
 File Descriptions
 ----------------------------------------------------
-main.cpp        : Main source file containing the program entry point
-io.cpp          : Source file handling all input and output operations
-legalizer.cpp   : Source file implementing cell legalization functions
-legalizer.h     : Header file defining data structures and declarations
-Makefile        : Makefile for automatic compilation
-README.md       : This documentation file
-report.docx     : Report explaining data structures and algorithms used
-pa2.txt			: Summarized version of the original problem statement
+main.cpp        : Main source file containing the program entry point\
+io.cpp          : Source file handling all input and output operations\
+legalizer.cpp   : Source file implementing cell legalization functions\
+legalizer.h     : Header file defining data structures and declarations\
+Makefile        : Makefile for automatic compilation\
+README.md       : This documentation file\
+report.docx     : Report explaining data structures and algorithms used\
+pa2.txt			: Summarized version of the original problem statement\
 
 Compilation Instructions
 ----------------------------------------------------
