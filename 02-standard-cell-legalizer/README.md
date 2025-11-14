@@ -21,6 +21,7 @@ This project implements a cell legalization algorithm for single-row-height cell
 ├── Makefile          # Build automation
 ├── README.md         # Project documentation
 ├── report.docx       # Detailed algorithm and data structure report
+├── pa2_testcases/    # Directory containing test input files
 └── pa2.txt           # Problem statement summary
 ```
 
