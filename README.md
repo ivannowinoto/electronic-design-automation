@@ -9,7 +9,7 @@ This repository contains four major projects covering fundamental topics in Elec
 ## Repository Structure
 
 ```
-electronic-design-automation/
+eda-course-projects/
 ├── 01-file-io-visualization/         # Visualization tool implementation
 ├── 02-standard-cell-legalizer/       # Cell legalization
 ├── 03-photonic-detailed-router/      # Photonic IC detailed routing
@@ -36,7 +36,7 @@ Each folder contains:
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd electronic-design-automation
+cd eda-course-projects
 ```
 
 2. Navigate to any project:
