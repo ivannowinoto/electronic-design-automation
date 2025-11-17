@@ -1,1 +1,82 @@
-tet
+PA3: Detailed Routing for Photonic Integrated Circuits (PICs)
+
+1. Problem Description
+    This assignment requires implementing a detailed router for Photonic Integrated Circuits (PICs). Unlike traditional metal routing, PIC waveguides are allowed to cross each other but with additional loss. Given:
+    - Grid size (horizontal × vertical),
+    - Propagation loss,
+    - Crossing loss,
+    - Bending loss,
+    - A list of 2-pin nets,
+
+    your task is to route all nets on the grid using only horizontal and vertical line segments. The objective is to minimize the total waveguide loss, which is composed of:
+    - Propagation loss = α × total wire length,
+    - Crossing loss = β × number of crossings,
+    - Bending loss = γ × number of 90-degree turns.
+
+2. Input Format
+    The input file contains:
+    grid H V               # grid dimension
+    propagation loss α
+    crossing loss β
+    bending loss γ
+    num net N             # number of nets
+
+    Each net has:
+    net_id xs ys xt yt    # net ID, source (xs, ys), target (xt, yt)
+
+    All values are integers.
+
+3. Output Format
+    For each net, output:
+    [net_id] [k = number of routed segments]
+    [x11] [y11] [x12] [y12]
+    [x21] [y21] [x22] [y22]
+    ...
+    [xk1] [yk1] [xk2] [yk2]
+
+    Rules:
+    - Only horizontal/vertical segments are allowed (no diagonals).
+    - First segment must start at (xs, ys); last segment must end at (xt, yt).
+    - Adjacent segments must connect: the end of segment i must equal the start of segment i+1.
+
+4. Objective Calculation Example
+    Total waveguide loss = propagation_length × α + number_of_crossings × β + number_of_bends × γ.
+
+5. Hints
+    Model the grid as a graph where:
+    - Each grid point is a node,
+    - Each movement to an adjacent grid costs propagation loss,
+    - Crossing and bending penalties can be incorporated into dynamic or incremental cost updates.
+
+    Path searching algorithms (e.g., BFS, Dijkstra, A*) can be applied.
+
+6. Language and Platform
+    Language: C or C++
+    Platform: Unix/Linux
+    Execution format:
+    ./picRouting <input_file> <output_file>
+
+7. Submission Requirements
+    Submit a compressed file named:
+    [student id]-p3.tgz
+    containing a single folder:
+    [student id]-p3
+
+    Items to include:
+    1. Source code
+    2. Makefile
+    3. readme.txt (how to build/run)
+    4. report.docx (≤ 2 pages, explains data structures and algorithms)
+
+    Rules:
+    - Filenames and folder names must use lowercase
+    - Only *.tgz format is accepted
+    - Submission must compile and run correctly on Linux
+    - Incorrect format or missing files will incur penalties
+
+8. Grading Policy
+    Grading is based on:
+    1. Correctness (all nets must be connected with no breaks)
+    2. Solution quality (total waveguide loss)
+    3. Runtime (≤ 10 minutes per test; grid up to 100×100 with up to 1000 nets)
+    4. Proper submission format

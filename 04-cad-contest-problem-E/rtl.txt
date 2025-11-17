@@ -1,0 +1,51 @@
+CAD Contest – Problem E: RTL Re-connection (Summary)
+
+1. Problem Overview
+    RTL (Register Transfer Level) designs use a top module that connects multiple sub-modules. When a sub-module is updated to a new version, its signal names or interface conventions may change. The task is to automatically re-connect the top module so that the updated sub-modules maintain the same functionality as before.
+    This problem focuses only on combinational logic (no sequential circuits).
+
+2. Goal
+    Generate a new top module (new_top_module.v) that connects to the updated sub-modules (new_sub_module.v) and behaves equivalently to the original top_module + sub_module combination.
+    All top-level input/output signal names in the output must remain identical to the original top_module.v.
+
+3. Input Files
+    - top_module.v: Contains only the interface connections between the top module and sub-modules.
+    - sub_module.v: Contains one or more original sub-module definitions.
+    - new_sub_module.v: Contains one or more updated sub-module definitions intended to replace the original ones.
+    - update_information: Describes the updated sub-module and all renamed signals. Two formats exist:
+    (1) "<signal A> is renamed."
+    (2) "<signal B> is renamed to <signal C>."
+
+4. Output File
+    new_top_module.v
+    This file must:
+    - Preserve the original top module’s I/O names.
+    - Update sub-module port names according to the rename rules.
+    - Maintain equivalent functionality to the original design.
+    - Not modify combinational logic except for updating renamed connected signals.
+    Only port-level reconnection is needed.
+
+5. Execution Format
+    ./<team_id> top_module.v sub_module.v new_sub_module.v update_information new_top_module.v
+    Language: C or C++
+    OS: Linux
+    Five public and five hidden testcases are provided.
+
+6. Checker
+    A checker is provided to verify correctness. It requires an input_match file, similar to update_information but containing the complete mapping of all renamed signals.
+    Usage:
+    ./checker <testcase> <input_match>
+
+7. Scoring
+    Each testcase is worth 1 point.
+    If multiple new sub-modules exist, each contributes 1/n to the score.
+    Tie-breaking is based on shorter total runtime.
+    Outputs must follow IEEE 1364-2005 Verilog standard.
+    Programs are terminated after 2 hours and scored based on the current output.
+
+8. Q&A Highlights
+    - Old and new sub-modules always have the same number of ports and identical bit-widths.
+    - update_information lists all modified signals.
+    - Form 2 mappings can be directly used to replace old signal names.
+    - Signals not mentioned in update_information do not change.
+    - No modification of combinational logic is required; only update sub-module port names.

@@ -1,0 +1,51 @@
+sub_module1 is updated to new_sub_module1.
+#1 in1 is renamed to new_in2.
+#2 in2 is renamed to new_in3.
+#3 in3 is renamed to new_in1.
+#4 out1 is renamed to new_out1.
+#5 out2 is renamed to new_out2.
+
+sub_module2 is updated to new_sub_module2.
+#1 in1 is renamed.
+#2 in2 is renamed.
+#3 in3 is renamed.
+#4 in4 is renamed.
+#5 in5 is renamed.
+#6 in6 is renamed.
+#7 in7 is renamed.
+#8 in8 is renamed.
+#9 in9 is renamed.
+#10 in10 is renamed.
+#11 in11 is renamed.
+#12 in12 is renamed to new_in4.
+#13 out1 is renamed to new_out5.
+#14 out2 is renamed.
+#15 out3 is renamed.
+#16 out4 is renamed.
+#17 out5 is renamed.
+#18 out6 is renamed.
+
+sub_module3 is updated to new_sub_module3.
+#1 in1 is renamed.
+#2 in2 is renamed.
+#3 in3 is renamed.
+#4 in4 is renamed.
+#5 in5 is renamed.
+#6 in6 is renamed.
+#7 in7 is renamed.
+#8 in8 is renamed.
+#9 in9 is renamed.
+#10 in10 is renamed.
+#11 in11 is renamed.
+#12 out1 is renamed.
+#13 out2 is renamed.
+#14 out3 is renamed.
+#15 out4 is renamed.
+#16 out5 is renamed.
+#17 out6 is renamed.
+#18 out7 is renamed.
+#19 out8 is renamed.
+#20 out9 is renamed.
+#21 out10 is renamed.
+#22 out11 is renamed.
+
