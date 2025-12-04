@@ -63,16 +63,6 @@ These projects demonstrate fundamental EDA concepts including:
 - Physical design automation
 - Verilog parsing and manipulation
 
-## License
-
-These projects are academic assignments and competition submissions. Please respect academic integrity policies if you are a student working on similar assignments.
-
-## Acknowledgments
-
-- Course instructors for problem design and guidance
-- ICCAD 2025 CAD Contest organizers
-- EDA research community
-
 ---
 
 **For detailed information about each project, please refer to the individual README.md files in each folder.**
